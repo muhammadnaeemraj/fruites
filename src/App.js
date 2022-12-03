@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Fruits from "./components/Fruits";
+import Counter from "./components/Counter";
+import { useState } from "react";
 
 function App() {
+  function Data(f) {
+    return f;
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Where should the state go?</h1>
+      <Fruits data={Data} />
+      <Counter data={Data} />
     </div>
   );
 }
